@@ -2,6 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useRef, useState } from 'react';
 
+// PDF 9.2
+const Child = (props) => {
+  return (
+    <div>
+      <h1>{props.title}</h1>
+      <div>{props.children}</div>
+    </div>
+  );
+};
+
 // function App() {
 //   // const kakao = window.kakao;
 //   // 일반 변수로 값을 할당시켜놓는것은 좋지 않은 방법임
@@ -76,6 +86,10 @@ function App() {
 
   return (
     <div className="App">
+      <Child title="abc">
+        <h3>제목</h3>
+        <h3>내용</h3>
+      </Child>
       <div id="map" style={
         {
           width: '500px', height: '400px'
